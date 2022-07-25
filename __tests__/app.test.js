@@ -29,6 +29,11 @@ describe('backend-zodiac routes', () => {
     expect(res.body).toEqual(expected);
   });
 
+  it('/zodiac/all returns the full sign list', async () => {
+    const res = await request(app).get('/zodiac/all');
+    expect(res.body).toEqual(zodiacSigns);
+  });
+
   afterAll(() => {
     pool.end();
   });
