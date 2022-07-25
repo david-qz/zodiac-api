@@ -18,6 +18,17 @@ describe('backend-zodiac routes', () => {
     expect(res.body).toEqual(expected);
   });
 
+  it('/zodiac/:id returns detail about sign', async () => {
+    const res = await request(app).get('/zodiac/1');
+    const expected = {
+      id: '1',
+      name: 'aquarius',
+      dates: 'Jan 21 - Feb 19',
+      symbol: 'Water Bearer'
+    };
+    expect(res.body).toEqual(expected);
+  });
+
   afterAll(() => {
     pool.end();
   });
