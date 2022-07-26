@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+    head
+        title Zodiac Signs
+    body
+        h1 Zodiac Sign
+        table
+            thead
+                th id
+                th name
+                th dates
+                th symbol
+            tbody
+                each sign in signs
+                    tr
+                        td #{sign.id}
+                        td
+                            a(href= './zodiac/' + sign.id) #{sign.name}
+                        td #{sign.dates}
+                        td #{sign.symbol}
