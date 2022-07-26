@@ -1,0 +1,5 @@
+### HoroscopeLibra
+GET http://localhost:7890/horoscope/libra
+
+### HoroscopeBadSign
+GET http://localhost:7890/horoscope/bear
