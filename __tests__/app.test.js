@@ -1,7 +1,7 @@
 const request = require('supertest');
 const app = require('../lib/app');
 
-const { zodiacSigns } = require('../data/zodiac-signs.js');
+const zodiacSigns = require('../data/zodiac-signs.json');
 
 describe('backend-zodiac routes', () => {
   it('/zodiac returns a list of zodiac signs', async () => {
