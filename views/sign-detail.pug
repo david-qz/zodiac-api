@@ -1,0 +1,12 @@
+- const [start, end] = sign.dates.split('-').map(x => x.trim());
+- const an = ['a', 'e', 'i', 'o', 'u']
+doctype html
+html(lang='en')
+    head
+        title #{sign.name}
+    body
+        h1 #{sign.name}
+        p You are a #{sign.name} if you born between #{start} and #{end}
+        p #{sign.name}'s symbol is the #{sign.symbol}
+
+
