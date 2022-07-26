@@ -9,3 +9,9 @@ GET http://localhost:7890/zodiac/all
 
 ### ZodiacSearch
 GET http://localhost:7890/zodiac/search?date=9/26
+
+### ZodiacSearchNoParam
+GET http://localhost:7890/zodiac/search
+
+### ZodiacSearchBadDate
+GET http://localhost:7890/zodiac/search?date=blah
