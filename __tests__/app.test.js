@@ -27,4 +27,19 @@ describe('backend-zodiac routes', () => {
     const res = await request(app).get('/zodiac/all');
     expect(res.body).toEqual(zodiacSigns);
   });
+
+  it('/zodiac/search returns the sign associated with date param', async() => {
+    const res = await request(app).get('/zodiac/search?date=3/11');
+    expect(res.body).toEqual({
+      sign: 'pisces'
+    });
+  });
+});
+
+describe('backend-horoscope route', () => {
+  it('/horoscope/[sign] returns a horoscope', async () => {
+    const res = await request(app).get('/horoscope/libra');
+    expect(res.body.horoscope).toBeDefined();
+    expect(typeof res.body.horoscope).toBe('string');
+  });
 });
