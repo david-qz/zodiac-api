@@ -1,0 +1,11 @@
+### ZodiacList
+GET http://localhost:7890/zodiac
+
+### ZodiacDetail
+GET http://localhost:7890/zodiac/1
+
+### ZodiacAll
+GET http://localhost:7890/zodiac/all
+
+### ZodiacSearch
+GET http://localhost:7890/zodiac/search?date=9/26
