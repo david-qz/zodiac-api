@@ -24,7 +24,7 @@
         </thead>
         <tbody class="table-row-group">
           <tr class="border-2">
-            <td class="table-cell p-3"><pre>/zodiac</pre></td>
+            <td class="table-cell p-3"><code>/zodiac</code></td>
             <td class="table-cell p-3 text-center">GET</td>
             <td class="table-cell p-3">Returns a list of zodiac signs.</td>
             <td class="table-cell p-3">
@@ -34,7 +34,19 @@
             </td>
           </tr>
           <tr class="border-2">
-            <td class="table-cell p-3"><pre>/zodiac/:id</pre></td>
+            <td class="table-cell p-3"><code>/zodiac/all</code></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">
+              Returns more details about all the zodiac signs.
+            </td>
+            <td class="table-cell p-3">
+              <a class="text-blue-700" href="/zodiac/all" target="_blank">
+                Get Details on All Signs
+              </a>
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><code>/zodiac/:id</code></td>
             <td class="table-cell p-3 text-center">GET</td>
             <td class="table-cell p-3">
               Returns more details about the zodiac sign matching the id in the parameter.
@@ -42,6 +54,42 @@
             <td class="table-cell p-3">
               <a href="/zodiac/1" target="_blank" class="text-blue-700">
                 Get Zodiac Sign 1
+              </a>
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><code>/zodiac/search?date=[dateString]</code></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">
+              Returns a zodiac sign associated with the birthdate passed in "date" query parameter.
+            </td>
+            <td class="table-cell p-3">
+              <a class="text-blue-700" href="/zodiac/search?date=3/11" target="_blank">
+                Get Zodiac Sign For March 11th
+              </a>
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><code>/horoscope/[sign]</code></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">
+              Gets a horoscope for the given sign
+            </td>
+            <td class="table-cell p-3">
+              <a class="text-blue-700" href="/horoscope/libra" target="_blank">
+                Get a horoscope for libra
+              </a>
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><code>/pages/zodiac</code></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">
+              Generated pages using this api's information.
+            </td>
+            <td class="table-cell p-3">
+              <a class="text-blue-700" href="/pages/zodiac" target="_blank">
+                Zodiac Pages
               </a>
             </td>
           </tr>
