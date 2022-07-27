@@ -39,6 +39,10 @@ describe('backend-zodiac routes', () => {
 describe('backend-horoscope route', () => {
   it('/horoscope/[sign] returns a horoscope', async () => {
     const res = await request(app).get('/horoscope/libra');
+
+    expect(res.body.date).toBeDefined();
+    expect(typeof res.body.date).toBe('string');
+
     expect(res.body.horoscope).toBeDefined();
     expect(typeof res.body.horoscope).toBe('string');
   });
